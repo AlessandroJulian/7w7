@@ -1,0 +1,25 @@
+import java.util.Scanner;
+ 
+public class PiramideEstrelles {
+public static void main (String[] args) {
+Scanner lector = new Scanner(System.in);
+ 
+System.out.print("Quina alçada vols? ");
+int alt = lector.nextInt();
+lector.nextLine();
+ 
+//Bucle més extern: L'alçada. Cada iteració fa una línia.
+for (int fila = 0; fila < alt; fila++) {
+ 
+//Bucle intern per fer els espais en blanc.
+for (int i = 1; i <= (alt - fila); i++) {
+System.out.print(" ");
+}
+//Bucle intern per fer les estrelles.
+for (int i = 1; i <= (fila * 2 - 1); i++) {
+System.out.print("*");
+}
+System.out.println();
+}
+}
+}
